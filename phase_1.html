@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue Js tutorial</title>
+</head>
+<body>
+
+
+
+
+        <div id="app" class="container" >
+    
+<br>
+         <h3 align="center" :class="countclass">{{count}}</h3>
+
+        <div  >
+         <button style="margin: 5px;" class="btn btn-primary" @click="inc">Increase</button>
+        <button  class="btn btn-danger" @click="dec">Decrease</button>
+
+        </div>
+
+
+
+
+       
+    </div>
+
+
+ 
+ 
+<script>
+
+    const app=Vue.createApp({
+
+        data(){
+            return{
+                count:0
+            }
+        },
+
+        methods:{
+            inc(){
+                this.count+=1
+            },
+
+            dec(){
+                this.count-=1
+            }
+        },
+
+        computed:{
+
+            countclass(){
+                if(this.count>=0){
+                    return "text-success"
+                }
+                else{
+                    return "text-danger"
+                }
+
+            }
+        }
+
+
+
+
+
+    })
+
+
+
+
+app.mount("#app")
+
+
+</script>
+
+
+
+  
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<div id="app">
+  
+    
+    <p v-if="age >= '18'">
+
+        <strong>you are voter</strong>
+    
+    </p>
+    <p v-else>
+        <strong>You are not voter</strong>
+    </p>
+
+
+
+</div>
+
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
+
+/////////
+
+
+
+
+
+const app = Vue.createApp({
+
+  data(){
+
+    return{
+
+      age:88
+      
+    }
+  },
+  methods: {
+    user(){
+      let ans=this.age >="18"?true: false;
+      return ans;
+    }
+  },
+
+
+
+})
+
+app.mount("#app");
+
+
+
+
+

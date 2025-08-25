@@ -1,0 +1,62 @@
+///////////////////////<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<div id="app">
+    <p>{{name}}</p>
+    
+    <p>{{hello()}}</p>
+</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
+
+
+///////////////App.js////////
+
+
+const app = Vue.createApp({
+  data() {
+    return {
+      name: "Hamim Shah",
+      isboll:true,
+      numb:[90,88,99]
+      
+
+    }
+  },
+
+  methods: {
+
+    hello(){
+        return `Hello ${this.name}`;
+      }
+    
+  },
+
+
+
+
+})
+
+app.mount("#app")
+
+
+
+
+
+
+
+

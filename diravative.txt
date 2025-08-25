@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<div id="app">
+    <hr>
+    <img v-bind:src="src" alt="alt"> <br>
+    <a v-bind:href="link">Click me</a>
+
+    <hr>
+
+    <hr>
+    <p v-text="text"></p>
+    <p v-html="myhtml"></p>
+
+
+
+</div>
+
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+//////////////
+
+
+
+
+const app = Vue.createApp({
+
+  data(){
+
+    return{
+      src:"https://picsum.photos/id/237/200/300",
+      alt:"404 not found",
+      link:"https://www.google.com/",
+      text:"Hello v-text",
+      myhtml:"<strong>Hello v-html</strong>"
+    }
+  }
+
+
+
+})
+
+app.mount("#app");
+
+
+
+
+

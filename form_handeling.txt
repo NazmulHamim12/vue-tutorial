@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="app">
+
+    <form v-on:submit.prevent="formhandle">
+
+        <hr>
+<label for="">First name:</label>
+<input type="text" v-model="form.f_name">
+<hr>
+
+<hr>
+
+<label for="">Last name:</label>
+<input v-model="form.l_name" type="text" />
+
+<hr>
+
+
+
+<button>Click</button>
+
+    </form>
+
+</div>
+
+
+
+
+
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+///////////////
+
+
+
+const app= Vue.createApp({
+
+data(){
+  return{
+
+    form:{
+      f_name:'',
+      l_name:''
+    }
+   
+
+  }
+},
+methods: {
+
+  formhandle(){
+    console.log(this.form)
+  }
+
+
+
+ 
+},
+
+
+
+
+});
+
+app.mount("#app");

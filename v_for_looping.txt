@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="app">
+    <p v-for="car in cars">
+        {{car}}
+    </p>
+    <br>
+
+<!-----Index soho car value---->
+
+   <p v-for="(car,index) in cars">
+        {{index}}:{{car}}
+    </p>
+
+<br>
+<!-----Object er upor v-for-->
+<p v-for="(val,key,index) in obj">
+    {{index}}:{{key}}:{{val}}
+</p>
+
+
+
+
+</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
+
+
+/////////////////
+
+const app= Vue.createApp({
+
+data(){
+  return{
+
+    name:"hamim shah",
+    cars:["Bmw","Ford","Toyota"],
+    obj:{
+      name:"Hamim shah",
+      age:19,
+      class:"12th"
+
+    }
+
+  }
+}
+
+
+
+
+});
+
+app.mount("#app");
